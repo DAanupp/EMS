@@ -50,7 +50,7 @@ def app():
                 conn.commit()
                 st.success('Record inserted successfully!')
                 
-                # Clear the input fields after insertion
+                #Clear the input fields after insertion
                 # st.text_input('Enter Employee ID', value='', key='eid')
                 # st.text_input('Enter Employee Name', value='', key='name')
                 # st.text_input('Enter Manager ID (Optional)', value='', key='mgr')
