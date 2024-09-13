@@ -1,8 +1,9 @@
 import streamlit as st
 import pandas as pd
 from dbc import cur, conn
-
+import det
 # Function to load employee details from the emp_det view
+
 # @st.cache_data
 def load_employee_details():
     try:
@@ -15,13 +16,13 @@ def load_employee_details():
         return pd.DataFrame(columns=['EID', 'Name', 'Manager', 'Salary', 'DeptID', 'Department Name', 'Location'])
 
 def app():
-    st.title('Employee Details')
-
+    
+    det.app()
     # Load employee details from the view
     employee_df = load_employee_details()
 
     if not employee_df.empty:
-        st.subheader('View Employee Details')
+        st.subheader('View Details for specific employee')
         emp_id = st.text_input('Enter Employee ID to get details')
 
         if emp_id:

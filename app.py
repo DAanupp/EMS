@@ -1,7 +1,6 @@
 import streamlit as st
-
 from streamlit_option_menu import option_menu
-import add,details,add_dept,promote,fire
+import add,add_dept,promote,fire,det
 
 st.title("Employee Management System")
 
@@ -18,7 +17,7 @@ with st.sidebar:
 if app == "Add Employee":
     add.app()
 elif app == "Employee Details":
-    details.app()
+    det.app()
 elif app == "Add Department":
     add_dept.app()
 elif app == "Promote Employee":
